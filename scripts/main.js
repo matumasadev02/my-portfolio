@@ -1,5 +1,5 @@
 const now = new Date();
-let currentHour = now.getHours();
+const currentHour = now.getHours() + 1;
 const htmlElement = document.querySelector("html");
 
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {

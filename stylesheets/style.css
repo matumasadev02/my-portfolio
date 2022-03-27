@@ -471,6 +471,12 @@ a:hover {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 600px) {
+  #aboutMe .container .introduction {
+    padding: 0 .5rem;
+  }
+}
+
 #myWorks .card {
   display: -webkit-box;
   display: -ms-flexbox;

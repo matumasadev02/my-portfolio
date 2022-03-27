@@ -439,6 +439,11 @@ a:hover {
     .introduction {
       max-width: 500px;
       margin: 0 auto;
+      @include mq(sp) {
+        & {
+          padding: 0 .5rem;
+        }
+      }
     }
   }
 }
