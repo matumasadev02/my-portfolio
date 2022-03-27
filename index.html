@@ -10,6 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>DEV02 | 次は、何を作ろう。</title>
+    <!-- ogp -->
+    <meta name="description" content="まっつん(@matumasa0202)のポートフォリオです。私のスキル、成果物についての情報を掲載しています。" />
+    <meta property="og:url" content="https://www.dev02.net/" />
+    <meta property="og:title" content="DEV02 | 次は、何をつくろう。" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.dev02.net/ogp.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matumasa0202" />
+    <meta property="og:site_name" content="DEV02" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- end ogp -->
 </head>
 
 <body class="default">
@@ -20,13 +31,15 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#mySkills">My Skills</a></li>
+            <li><a href="#myWorks">My Works</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div id="theme-toggler">
         <div class="theme-toggler-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
-                width="24px" fill="#000000">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                viewBox="0 0 24 24" width="24px" fill="#000000">
                 <path
                     d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z" />
             </svg>
@@ -37,7 +50,7 @@
             <h1>
                 DEV02
                 <br>
-                <span class="text--gradient background--gradient animation--fadein">次は、何を作ろう。</span>
+                <span class="text--gradient background--gradient animation--fadein">次は、何をつくろう。</span>
             </h1>
             <img src="images/undraw_coding_re_iv62.svg" alt="coding...">
         </div>
@@ -54,14 +67,177 @@
                 <img src="/images/undraw_male_avatar_323b.svg" alt="person">
                 <h3 class="name">まっつん <span>@matumasa0202</span></h3>
                 <p>2007年生まれ</p>
+                <p><a target="_blank" href="https://www.escgrp.org">Escape Group</a> 所属</p>
             </div>
             <div class="introduction">
-                <p>小学校高学年のときにドンキ(鈍器)pcをもらう。なんとか動作を軽くしようとLinuxを動かそうと悪戦苦闘する。</p>
-                <p>その後、プログラミングに興味を持つ。本格的に始めたのはPython。そのおもしろさの虜になる。</p>
-                <p>思い返すと、はじめての端末がドンキPCでよかったと思う。みなさん、お子様にはドンキPCを買ってあげましょう。()</p>
+                <p>小学校高学年のときにドンキ(鈍器)PCをもらう。あまりの動作の遅さをなんとか解決しようとしていたとき、Linuxに出会う。しかし、まともにドライバも当たらなかったため悪戦苦闘する。そうするうちにさまざまな知識を身につける。
+                </p>
+                <p>その後、Linuxつながりでプログラミングに興味を持ち、Pythonを学習し始める。自分で作ったものが動くというおもしろさにハマる。</p>
+                <p>気づけばすっかりPCオタクになっていた。</p>
             </div>
         </div>
     </div>
+    <div class="section-heading">
+        <h2>My Skills</h2>
+    </div>
+    <div id="mySkills">
+        <div class="container container--grid">
+            <div class="card">
+                <h3>Python</h3>
+                <p>はじめて触れたプログラミング言語です。</p>
+                <p>その割には大したことはできません。</p>
+                <p>Flask,FastAPIを触ったことがあります。</p>
+            </div>
+            <div class="card">
+                <h3>HTML/CSS</h3>
+                <p>使用頻度はかなり高いです。</p>
+                <p>やりたいことができる程度のスキルはあります。</p>
+                <p>このサイトは、HTMLとSCSSでつくりました。</p>
+            </div>
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>主にウェブ開発で使っています。Vue,Nuxtを使用したサイト構築も経験しました。</p>
+                <p>かなり手軽に使えるところが気に入っています。</p>
+            </div>
+            <div class="card">
+                <h3>Google Apps Script</h3>
+                <p>スプレッドシートと連携させてデータベース/API的に使ったり、質問箱を作ったりしました。</p>
+                <p>したいことを手軽に実現できるところがお気に入りです。</p>
+            </div>
+            <div class="card">
+                <h3>Linux</h3>
+                <p>たくさんのディストリビューションを試してきました。テーマを変えたり、簡単なスクリプトを作ったりしました。</p>
+                <p>基本的なコマンド操作ができます。</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-heading">
+        <h2>My Works</h2>
+    </div>
+    <div id="myWorks">
+        <div class="container--grid container">
+            <div class="card">
+                <h3>入試得点共有</h3>
+                <p>京都の専門学科入試の得点を共有するサイトです。</p>
+                <ul class="languages">
+                    <li>HTML/CSS</li>
+                    <li>Nuxt</li>
+                    <li>Python(FastAPI)</li>
+                </ul>
+                <ul class="links">
+                    <li>
+                        <a target="_blank" href="https://kyoto-senmon-nyushi.vercel.app/">Visit Website</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Eitango!</h3>
+                <p>不規則活用動詞などの英単語を覚えるやつです。</p>
+                <ul class="languages">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Google Apps Script</li>
+                </ul>
+                <ul class="links">
+                    <li>
+                        <a target="_blank" href="https://github.com/matumasadev02/eitango">View Source</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://eitango.dev02.net/">Visit Website</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>youtube-dl audio api</h3>
+                <p>youtube-dlを用いてbestaudioを返したりするAPIです。</p>
+                <ul class="languages">
+                    <li>Python(flask)</li>
+                </ul>
+                <ul class="links">
+                    <li>
+                        <a target="_blank" href="https://github.com/matumasadev02/youtube-dl-audio-api">View Source</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>youtube-dl-api-client</h3>
+                <p>youtube-dlのAPIをブラウザ上で使えるようにしたものです。</p>
+                <ul class="languages">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <ul class="links">
+                    <li>
+                        <a target="_blank" href="https://www.dev02.net/apps/youtube-dl-api-client">Visit Website</a>
+                        <a target="_blank" href="https://github.com/matumasadev02/youtube-dl-api-client-main">View
+                            Source</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>bingwall-kde</h3>
+                <p>Bingの毎日の写真をKDEの壁紙にするスクリプトです。</p>
+                <ul class="languages">
+                    <li>Python</li>
+                </ul>
+                <ul class="links">
+                    <li>
+                        <a target="_blank" href="https://github.com/matumasadev02/set-bingwall-kde">View Source</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section-heading">
+        <h2>Contact Me</h2>
+    </div>
+    <div id="contact">
+        <div class="container--grid container">
+            <div class="card">
+                <h3>Twitter</h3>
+                <p>DMからお問い合わせください。</p>
+                <p>
+                    <a target="_blank" href="https://www.twitter.com/matumasa0202">
+                        Twitter<span>@matumasa0202</span>
+                    </a>
+                </p>
+            </div>
+            <div class="card">
+                <h3>Email</h3>
+                <p>基本はTwitterからお問い合わせいただけると幸いです。</p>
+                <p>
+                    <a href="mailto:main@dev02.net">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path
+                                d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+                        </svg>
+                        main@dev02.net
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.twitter.com/matumasa0202">Twitter</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/matumasadev02/">GitHub</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.escgrp.org">Escape Group</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>pictures by <a target="_blank" href="https://undraw.co/">undraw</a></p>
+                <small>&copy;matumasa0202</small>      
+            </div>
+        </div>
+    </footer>
     <script src="scripts/main.js"></script>
 </body>
 

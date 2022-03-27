@@ -10,6 +10,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   transition: 0.5s;
   scroll-behavior: smooth;
+  scroll-margin-top: 5rem;
 }
 //// end global
 
@@ -49,7 +50,7 @@ $breakpoint: (
   @include mq(pc) {
     & {
       margin: 0 auto;
-      max-width: unquote($string: "min(70vw, 1200px)");
+      max-width: unquote($string: "min(75vw, 1200px)");
     }
   }
 }
@@ -72,8 +73,8 @@ $colors--dark: (
   text--sub: #ccc,
   accent--main: #736efe,
   accent--sub: #5efce8,
-  bg--main: #333,
-  bg--sub: #444,
+  bg--main: #222,
+  bg--sub: #333,
   border--main: #666,
   border--sub: #777,
 );
@@ -154,7 +155,6 @@ a:hover {
     svg {
       width: 100%;
       height: 100%;
-      fill: $text--main;
     }
   }
 }
@@ -189,7 +189,7 @@ a:hover {
 // scroll next
 @mixin scroll-next {
   div {
-    width: 3px;
+    width: 2px;
     height: 3.5rem;
     background-color: $accent--sub;
     z-index: 8000;
@@ -199,12 +199,17 @@ a:hover {
 @keyframes scroll-next {
   0% {
     height: 0;
+    top: 0;
+    opacity: 0;
   }
-  70% {
+  30% {
     height: 3.5rem;
+    opacity: 1;
   }
   100% {
     height: 0;
+    top: 50px;
+    opacity: 0;
   }
 }
 
@@ -215,11 +220,20 @@ a:hover {
   }
   margin: 1rem 0.5rem;
   h2 {
-    // display: inline-block;
-    // border: 3px solid $accent--main;
     padding: 1rem;
     font-size: 2rem;
     font-weight: 700;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $border--main;
+      margin: 0.5rem 0;
+      @include mq(pc) {
+        margin: 1rem 0 0.5rem 0;
+      }
+    }
   }
 }
 
@@ -229,10 +243,11 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
   margin-bottom: 2rem;
+  padding: 0 1.5rem;
   @include mq(pc) {
     & {
       margin: 0 auto;
-      max-width: unquote($string: "min(70vw, 1200px)");
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
   }
   .card {
@@ -243,7 +258,7 @@ a:hover {
     &:hover {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     }
-    .heading--card {
+    h3 {
       margin: 0;
       font-size: 1.5rem;
       &:after {
@@ -253,6 +268,9 @@ a:hover {
         height: 1px;
         background-color: $border--main;
         margin: 0.4rem 0;
+        @include mq(pc) {
+          margin: 0.6rem 0;
+        }
       }
     }
     p:nth-child(2) {
@@ -262,6 +280,11 @@ a:hover {
       max-width: 100%;
     }
   }
+}
+
+// icons
+.icon {
+  fill: $text--main;
 }
 //// end components
 
@@ -285,7 +308,7 @@ a:hover {
     li {
       padding: 0.3rem 1rem;
       a {
-        font-size: 5vw;
+        font-size: unquote($string: "min(5vw, 3.5rem)");
         color: #f5f5f5;
       }
     }
@@ -370,8 +393,8 @@ a:hover {
     @include scroll-next;
     position: absolute;
     right: 50%;
-    transform: translateX(50%);
-    bottom: 0;
+    margin-right: -1px;
+    top: calc(100vh - 3.5rem);
   }
 }
 //// end hero
@@ -414,3 +437,105 @@ a:hover {
 }
 
 //// end about me
+
+//// my works
+#myWorks {
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .languages {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      li {
+        margin-right: 0.5rem;
+        list-style: none;
+        padding: 0.4rem;
+        border: 1px solid $border--sub;
+        border-radius: 5px;
+        margin-right: 0.3rem;
+        margin-bottom: 0.4rem;
+        font-size: 0.8rem;
+      }
+    }
+    .links {
+      margin-top: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      li {
+        list-style: none;
+        padding: 0.7rem 0.4rem 0.7rem 0;
+        a {
+          background-color: $accent--main;
+          color: #fff;
+          padding: 0.5rem;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+//// end my works
+
+//// contact
+#contact {
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .icon {
+      margin-right: 0.5rem;
+    }
+    a {
+      color: $text--main;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      span {
+        color: $text--sub;
+        margin-left: 0.6rem;
+      }
+    }
+  }
+}
+//// end contact
+
+//// footer
+footer {
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  background-color: $bg--sub;
+  color: $text--main;
+  font-size: 0.8rem;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .links {
+      font-size: 1rem;
+      li {
+        list-style: none;
+      }
+    }
+    a {
+      color: $text--main;
+      &:hover {
+        color: $text--sub;
+      }
+    }
+    .copyright {
+      align-self: flex-end;
+      small {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+//// end footer
