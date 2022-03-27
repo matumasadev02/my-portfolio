@@ -61,19 +61,6 @@ body {
   --color-border--sub: #777;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text--main: #fff;
-    --color-text--sub: #ccc;
-    --color-accent--main: #736efe;
-    --color-accent--sub: #5efce8;
-    --color-bg--main: #222;
-    --color-bg--sub: #333;
-    --color-border--main: #666;
-    --color-border--sub: #777;
-  }
-}
-
 body {
   background-color: var(--color-bg--main);
   color: var(--color-text--main);
@@ -580,7 +567,7 @@ a:hover {
 
 footer {
   padding: 1.5rem 1rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   background-color: var(--color-bg--sub);
   color: var(--color-text--main);
   font-size: 0.8rem;
