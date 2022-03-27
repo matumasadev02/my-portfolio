@@ -11,6 +11,7 @@ body {
   transition: 0.5s;
   scroll-behavior: smooth;
   scroll-margin-top: 5rem;
+  font-weight: 400;
 }
 //// end global
 
@@ -490,6 +491,7 @@ a:hover {
           color: #fff;
           padding: 0.5rem 0.7rem;
           border-radius: 3px;
+          font-weight: 700;
           white-space: nowrap;
         }
       }
