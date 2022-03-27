@@ -239,6 +239,11 @@ a:hover {
   grid-gap: 1rem;
   margin-bottom: 2rem;
   padding: 0 1.5rem;
+  @include mq(tab) {
+    & {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
   @include mq(pc) {
     & {
       margin: 0 auto;
