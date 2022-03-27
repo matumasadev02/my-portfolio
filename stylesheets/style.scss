@@ -125,10 +125,7 @@ a:hover {
 
 .background--gradient {
   @include gradient-bg($accent--main, $accent--sub);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
 }
 
 // theme switcher
@@ -178,6 +175,10 @@ a:hover {
     color: transparent;
   }
   color: $text--main;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 // scroll next
@@ -288,12 +289,15 @@ a:hover {
   position: fixed;
   z-index: 8500;
   height: 100vh;
+  width: 100vw;
   padding: 2rem;
+  @include mq(pc) {
+    padding: 3rem 5rem;
+  }
   top: 0;
   right: -100vw;
   transition: 0.5s;
-  background-color: rgba(black, 0.9);
-  backdrop-filter: blur(10px);
+  @extend .background--gradient;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -302,7 +306,7 @@ a:hover {
     li {
       padding: 0.3rem 1rem;
       a {
-        font-size: unquote($string: "min(5vw, 3.5rem)");
+        font-size: unquote($string: "min(5vw, 2.5rem)");
         color: #f5f5f5;
       }
     }
@@ -343,10 +347,12 @@ a:hover {
     &:before {
       transform: rotate(45deg) translateY(0);
       opacity: 1;
+      background-color: #fff;
     }
     &:after {
       transform: rotate(-45deg) translateY(0);
       opacity: 1;
+      background-color: #fff;
     }
   }
 }
@@ -477,7 +483,7 @@ a:hover {
           display: block;
           background-color: $accent--main;
           color: #fff;
-          padding: 0.5rem;
+          padding: 0.5rem 0.7rem;
           border-radius: 3px;
           white-space: nowrap;
         }
