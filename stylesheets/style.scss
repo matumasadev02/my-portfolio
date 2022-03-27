@@ -125,7 +125,6 @@ a:hover {
 
 .background--gradient {
   @include gradient-bg($accent--main, $accent--sub);
-
 }
 
 // theme switcher
@@ -306,6 +305,7 @@ a:hover {
     li {
       padding: 0.3rem 1rem;
       a {
+        font-weight: 700;
         font-size: unquote($string: "min(5vw, 2.5rem)");
         color: #f5f5f5;
       }
