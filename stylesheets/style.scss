@@ -50,7 +50,7 @@ $breakpoint: (
   @include mq(pc) {
     & {
       margin: 0 auto;
-      max-width: unquote($string: "min(75vw, 1200px)");
+      max-width: unquote($string: "min(80vw, 1200px)");
     }
   }
 }
@@ -245,13 +245,13 @@ a:hover {
     }
   }
   .card {
-    border: 1px solid $border--main;
+    // border: 1px solid $border--main;
     border-radius: 0.5rem;
     padding: 1rem;
     transition: 0.3s;
-    &:hover {
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    }
+    // &:hover {
+    //   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    // }
     h3 {
       margin: 0;
       font-size: 1.5rem;
@@ -403,9 +403,16 @@ a:hover {
     grid-template-columns: 1fr 3fr;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    max-width: 1200px;
+    @include mq(pc) {
+      & {
+        max-width: unquote($string: "min(70vw, 1200px)");
+      }
+    }
     @include mq(sp) {
       & {
         grid-template-columns: 1fr;
+        gap: 0;
       }
     }
     .container--image {
