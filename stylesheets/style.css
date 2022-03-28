@@ -628,6 +628,10 @@ footer .container .links li {
   list-style: none;
 }
 
+footer .container .links a {
+  font-size: 0.9rem;
+}
+
 footer .container a {
   color: var(--color-text--main);
 }
