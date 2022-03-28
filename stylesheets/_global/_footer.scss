@@ -1,9 +1,11 @@
+@use "theme" as t;
+
 //// footer
 footer {
   padding: 1.5rem 1rem;
   margin-top: 2.5rem;
-  background-color: $bg--sub;
-  color: $text--main;
+  background-color: t.$bg--sub;
+  color: t.$text--main;
   font-size: 0.8rem;
   .container {
     display: flex;
@@ -19,9 +21,9 @@ footer {
       }
     }
     a {
-      color: $text--main;
+      color: t.$text--main;
       &:hover {
-        color: $text--sub;
+        color: t.$text--sub;
       }
     }
     .copyright {

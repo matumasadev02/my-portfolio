@@ -1,3 +1,6 @@
+@use "common" as c;
+@use "theme" as t;
+
 //// nav
 // menu
 #menu {
@@ -6,7 +9,7 @@
   height: 100vh;
   width: 100vw;
   padding: 2rem;
-  @include mq(pc) {
+  @include c.mq(pc) {
     padding: 3rem 5rem;
   }
   top: 0;
@@ -40,14 +43,14 @@
   #nav-toggler-icon {
     width: 2rem;
     height: 2px;
-    background-color: $text--main;
+    background-color: t.$text--main;
     transition: 0.5s;
     &:before,
     &:after {
       content: "";
       width: 2rem;
       height: 2px;
-      background-color: $text--main;
+      background-color: t.$text--main;
       position: absolute;
       transition: 0.5s;
     }
