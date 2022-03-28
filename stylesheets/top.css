@@ -380,6 +380,56 @@ a:hover {
   right: 0;
 }
 
+footer {
+  padding: 1.5rem 1rem;
+  margin-top: 2.5rem;
+  background-color: var(--color-bg--sub);
+  color: var(--color-text--main);
+  font-size: 0.8rem;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .links {
+  font-size: 1rem;
+}
+
+footer .container .links li {
+  list-style: none;
+}
+
+footer .container .links a {
+  font-size: 0.9rem;
+}
+
+footer .container a {
+  color: var(--color-text--main);
+}
+
+footer .container a:hover {
+  color: var(--color-text--sub);
+}
+
+footer .container .copyright {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+footer .container .copyright small {
+  font-size: 0.8rem;
+}
+
 #hero {
   position: relative;
   height: 100vh;
@@ -486,7 +536,7 @@ a:hover {
 
 @media screen and (max-width: 600px) {
   #aboutMe .container .introduction {
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
   }
 }
 
@@ -598,54 +648,4 @@ a:hover {
   color: var(--color-text--sub);
   margin-left: 0.6rem;
 }
-
-footer {
-  padding: 1.5rem 1rem;
-  margin-top: 2.5rem;
-  background-color: var(--color-bg--sub);
-  color: var(--color-text--main);
-  font-size: 0.8rem;
-}
-
-footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-footer .container .links {
-  font-size: 1rem;
-}
-
-footer .container .links li {
-  list-style: none;
-}
-
-footer .container .links a {
-  font-size: 0.9rem;
-}
-
-footer .container a {
-  color: var(--color-text--main);
-}
-
-footer .container a:hover {
-  color: var(--color-text--sub);
-}
-
-footer .container .copyright {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-footer .container .copyright small {
-  font-size: 0.8rem;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=top.css.map */
