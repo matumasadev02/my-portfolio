@@ -7,8 +7,12 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
   htmlElement.dataset.theme = "dark";
   document.body.classList.remove("default");
   document.body.classList.add("dark");
+} else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+  htmlElement.dataset.theme = "default";
+  document.body.classList.remove("dark");
+  document.body.classList.add("default");
 } else {
-  if (currentHour >= 6 && currentHour < 18) {
+  if (currentHour >= 6 && currentHour < 19) {
     htmlElement.dataset.theme = "default";
     document.body.classList.remove("dark");
     document.body.classList.add("default");

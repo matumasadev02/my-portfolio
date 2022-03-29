@@ -1,4 +1,5 @@
 @use "theme" as t;
+@use "responsive" as r;
 
 //// footer
 footer {
@@ -18,6 +19,11 @@ footer {
       }
       a {
         font-size: 0.9rem;
+      }
+      @include r.mq(sp) {
+        a {
+          font-size: 0.8rem;
+        }
       }
     }
     a {
