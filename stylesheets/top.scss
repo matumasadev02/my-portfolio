@@ -23,7 +23,7 @@
   @include g.mq(pc) {
     text-align: center;
   }
-  margin: 1.5rem 0.5rem 1rem 0.5rem;
+  margin: 1rem 0.5rem;
   h2 {
     padding: 1rem;
     font-size: 2rem;
@@ -33,10 +33,11 @@
       display: block;
       width: 100%;
       height: 1px;
-      background-color: g.$border--main;
+      background-color: g.$accent--main;
       margin: 0.5rem 0;
       @include g.mq(pc) {
-        margin: 1rem 0 0.5rem 0;
+        margin: 1rem auto 0.5rem auto;
+        width: 10rem;
       }
     }
   }
@@ -122,12 +123,13 @@
   overflow-x: hidden;
   .container {
     padding: 0 4vw;
+    height: 100%;
     h1 {
+      font-size: unquote("min(10vw, 5rem)");
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      font-size: unquote("min(10vw, 5rem)");
-      font-weight: bold;
+      font-weight: 700;
       @include fadeIn(2s, 0s);
       span.animation--fadein {
         @include fadeIn(2.5s, 0s);
@@ -173,36 +175,6 @@
   }
 }
 //// end hero
-
-//// my concept
-#myConcept {
-  .container {
-    padding: 1rem 1.5rem;
-    h3 {
-      font-size: unquote($string: "min(8.5vw, 5rem)");
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      color: #fff;
-      padding: 0.5rem 1rem;
-    }
-    p {
-      font-size: 1.3rem;
-      line-height: 2rem;
-    }
-    @include g.mq(sp) {
-      padding: 0 1.5rem;
-      h3 {
-        font-size: unquote($string: "min(2.4rem, 7.5vw)");
-      }
-      p {
-        font-size: 1rem;
-        line-height: 1.7rem;
-      }
-    }
-  }
-}
-
-//// end my concept
 
 //// about me
 #aboutMe {
@@ -258,6 +230,33 @@
 
 //// end about me
 
+//// my concept
+#myConcept {
+  .container {
+    padding: 1rem;
+    h3 {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      font-size: 12vw;
+      font-weight: 700;
+      @include fadeIn(2s, 0s);
+      color: #fff;
+      @include g.mq(sp) {
+        & {
+          font-size: 2.2rem;
+        }
+      }
+      @include g.mq(pc) {
+        font-size: 6rem;
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.9rem;
+    }
+  }
+}
+
 //// my works
 #myWorks {
   .card {
@@ -308,7 +307,7 @@
 //// end my works
 
 //// contact
-#contactMe {
+#contact {
   p {
     margin-top: 1rem;
     margin-bottom: 1rem;

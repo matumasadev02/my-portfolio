@@ -1,26 +1,24 @@
-@use "responsive" as c;
+@use "common" as c;
 @use "theme" as t;
 
 //// nav
 // menu
-
 #menu {
   position: fixed;
   z-index: 8500;
   height: 100vh;
   width: 100vw;
   padding: 2rem;
+  @include c.mq(pc) {
+    padding: 3rem 5rem;
+  }
   top: 0;
   right: -100vw;
-  transition: 0.3s;
+  transition: 0.5s;
   @extend .background--gradient;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  @include c.mq(pc) {
-    padding: 3rem 5rem;
-    transition: 0.4s;
-  }
   ul {
     list-style: none;
     li {
@@ -46,7 +44,7 @@
     width: 2rem;
     height: 2px;
     background-color: t.$text--main;
-    transition: 0.2s;
+    transition: 0.5s;
     &:before,
     &:after {
       content: "";
@@ -54,10 +52,7 @@
       height: 2px;
       background-color: t.$text--main;
       position: absolute;
-      transition: 0.3s;
-      @include c.mq(pc) {
-        transition: 0.4s;
-      }
+      transition: 0.5s;
     }
     &:before {
       transform: translateY(0.6rem);
