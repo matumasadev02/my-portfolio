@@ -32,7 +32,7 @@
       content: "";
       display: block;
       width: 100%;
-      height: 1px;
+      height: 2px;
       background-color: g.$accent--main;
       margin: 0.5rem 0;
       @include g.mq(pc) {
