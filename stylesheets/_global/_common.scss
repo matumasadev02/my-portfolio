@@ -4,8 +4,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+// @font-face {
+//   font-family: 'noto-sans-cjk-jp';
+//   src: url('/fonts/NotoSansJP-Bold.woff2') format('woff2');
+//   font-weight: 700;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'noto-sans-cjk-jp';
+//   src: url('/fonts/NotoSansJP-Regular.woff2') format('woff2');
+//   font-weight: 400;
+//   font-display: swap;
+// }
+
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: noto-sans-cjk-jp, sans-serif;
   transition: 0.5s;
   scroll-behavior: smooth;
   font-weight: 400;

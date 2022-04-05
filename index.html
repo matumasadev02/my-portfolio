@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="preload" as="font" href="/fonts/NotoSansJP-Bold.woff2" crossorigin> -->
     <link rel="stylesheet" href="stylesheets/top.css">
     <title>DEV02 | 次は、何をつくろう。</title>
     <!-- favicon -->
@@ -60,9 +58,8 @@
             </h1>
             <img src="images/undraw_coding_re_iv62.svg" loading="auto" alt="coding...">
         </div>
-        <a href="#aboutMe" class="scroll-next">
-            <div></div>
-        </a>
+        <div href="#aboutMe" class="scroll-next">
+        </div>
     </div>
     <main>
         <div id="aboutMe">
@@ -71,7 +68,7 @@
             </div>
             <div class="container">
                 <div class="container--image">
-                    <img src="/images/undraw_male_avatar_323b.svg" loading="lazy" alt="person">
+                    <img src="/images/undraw_male_avatar_323b.svg" width="150" height="150" loading="lazy" alt="person">
                     <h3 class="name">まっつん <span>@matumasa0202</span></h3>
                     <p>2007年生まれ</p>
                     <p><a target="_blank" href="https://www.escgrp.org">Escape Group</a> 所属</p>
@@ -272,7 +269,17 @@
             </div>
         </div>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script async src="scripts/main.js"></script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'zcm1zof',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
     <!-- <script src="scripts/luxy.js-master/src/js/luxy.js"></script> -->
     <!-- <script>
         luxy.init();
